@@ -1,0 +1,18 @@
+{
+    "SchemaVersion": 1,
+    "Company": "NVIDIA",
+    "Name": "network_interface",
+    "Description": "A sample plugin, which displays the network counters of a given Ethernet interface. Its aim is to provide a simple example of an Nsight Systems plugin. The plugin source code can be found under SamplePlugins/NetworkUsage.",
+    "Images": 
+    [
+        {
+            "Path": "./Images/network_interface.png",
+            "Description": "network_interface plugin image"
+        }
+    ],
+    "SiteURL": "https://developer.nvidia.com/nsight-systems",
+    "Architectures": ["x64", "aarch64"],
+    "OperatingSystems": ["Linux"],
+    "MinNsightSystemsVersion": "2024.1.1",
+    "SetupNotes": "This plugin is included within the Nsight Systems installation package for Linux."
+}

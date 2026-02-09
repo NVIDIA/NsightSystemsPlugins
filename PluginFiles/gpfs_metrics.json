@@ -1,0 +1,18 @@
+{
+    "SchemaVersion": 1,
+    "Company": "IBM",
+    "Name": "gpfs_metrics",
+    "Description": "This plugin collects GPFS (IBM General Parallel File System) client volumes metrics and displays them over the Nsight Systems timeline view.",
+    "Images": 
+    [
+        {
+            "Path": "./Images/gpfs_metrics.png",
+            "Description": "gpfs_metrics plugin image"
+        }
+    ],
+    "SiteURL": "https://www.ibm.com/products/storage-scale",
+    "Architectures": ["x64", "aarch64"],
+    "OperatingSystems": ["Linux"],
+    "MinNsightSystemsVersion": "2026.2.1",
+    "SetupNotes": "This plugin is installed with the IBM storage scale client driver. Use the NSYS_PLUGIN_SEARCH_DIRS environment variable to specify the directory containing the plugin."
+}

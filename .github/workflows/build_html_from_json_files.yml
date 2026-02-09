@@ -1,0 +1,56 @@
+# Workflow name
+name: BuildHTMLFromJSONFiles
+
+on:
+  # Trigger the workflow on push or pull requests on the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Also allow running the workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write      # Required for deploying to Pages
+  id-token: write   # Required for OIDC token authentication
+
+jobs:
+  build_html:
+    # The runner on which the "build_html" job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
+    - uses: actions/checkout@v4
+
+    # Setup Python
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    # Install dependencies
+    - run: pip install -r scripts/requirements.txt
+
+    # Runs a python script using the runners shell, to create the HTML file
+    - run: python scripts/BuildHTMLFromJSONFiles.py -i PluginFiles -o Pages/index.html
+
+    # Copy the Images to also reside under "Pages"
+    - run: cp -r PluginFiles/Images Pages 
+
+    # Load the generated HTML page into GitHub pages
+    - uses: actions/upload-pages-artifact@v3
+      with:
+         path: 'Pages'
+
+  deploy:
+    needs: build_html
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy the generated HTML files into GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

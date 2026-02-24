@@ -7,7 +7,7 @@ Plugins registered in this site appear in a list, pointed by the [Nsight Systems
 
 This GitHub repository does not host the plugins' code, binary code or installers. It provided information about the third-part plugins and where to find them.
 
-- [View third-party plugins list](https://potential-adventure-2egyr1z.pages.github.io/)
+- [View third-party plugins list](https://nvidia.github.io/NsightSystemsPlugins/)
 - [Add a third-party plugin to the list](./ADD_PLUGIN.md)
 
 ## Third-Party Plugins Disclaimer

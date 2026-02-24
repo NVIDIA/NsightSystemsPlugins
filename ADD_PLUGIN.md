@@ -16,7 +16,7 @@ To register an Nsight Systems plugin in this GitHub repository, follow these ste
     - The "SiteURL" variable should contain the URL from which users can download the plugin
     - The "Architectures" variable describes the plugin's supported architectures. Available values are "x64" and "aarch64".
     - The "OperatingSystems" variable describes the plugin's supported operating systems. Available values are "Windows" and "Linux".
-    - If your plugin requires a special Nsight Systems version, please use the MinNsightSystemsVersion and MaxNsightSystemsVersion to specify that.
+    - If your plugin requires a special Nsight Systems version, please use the MinNsightSystemsVersion to specify that.
 4. Optionally (but recommended), place a plugin screen shot under the "PluginFiles/Images" directory. The screen shot should be pointed to by the json file's "Images" array.
 5. Push a merge request of your branch to be reviewed by the Nsight Systems team.
 

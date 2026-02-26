@@ -20,6 +20,10 @@ To register an Nsight Systems plugin in this GitHub repository, follow these ste
 4. Optionally (but recommended), place a plugin screen shot under the "PluginFiles/Images" directory. The screen shot should be pointed to by the json file's "Images" array.
 5. Push a merge request of your branch to be reviewed by the Nsight Systems team.
 
+## Note
+This repository cannot host the plugins' source code or binaries, since we cannot scan the code or binaries, test it or be reliable to it.
+The plugin's json file should tell the reader where to find the plugin binaries or source code, either by the "SiteURL" or "SetupNotes" fields.
+
 ## Tips
 
 Use the "scripts/run_build_worklow_locally.sh" script to generate the plugins list locally. This enables viewing of the resulting list before pushing the merge request. After running the script, the plugins list will appear under the "Pages" directory. Load the "Pages/index.html" file into a browser to view it.

@@ -1,0 +1,3 @@
+PluginName: sw_nsys_plugin
+ExecutablePath: sw_nsys_plugin
+Description: Collects PCIe switch metrics (throughput, utilization, and errors) and displays them on the Nsight Systems timeline.

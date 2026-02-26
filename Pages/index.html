@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nsight Systems Plugins</title>
+    <link rel="icon" type="image/x-icon" href="./Images/nvidia-favicon.ico">
+    <style>
+        :root { font-family: system-ui, sans-serif; line-height: 1.5; color: #1a1a1a; background: #f5f5f5; }
+        body { max-width: 720px; margin: 0 auto; padding: 1.5rem; }
+        .page-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+        .page-header img { height: 5rem; width: auto; display: block; margin-left: -1.5rem; }
+        h1 { margin: 0; }
+        .toc { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .toc ul { margin: 0; padding-left: 1.5rem; }
+        .toc li { margin: 0.35rem 0; }
+        .toc a { color: #0066cc; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .plugin-card { background: #fff; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .plugin-header { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+        .plugin-header h2 { margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+        .plugin-thumb { flex-shrink: 0; }
+        .plugin-thumb a { text-decoration: none; display: inline-block; }
+        .plugin-img { max-width: 700px; max-height: 300px; object-fit: contain; border-radius: 4px; }
+        .plugin-desc { margin: 0.5rem 0; color: #333; }
+        .plugin-meta { margin: 0.75rem 0; font-size: 0.9rem; }
+        .plugin-meta dt { font-weight: 600; margin-top: 0.25rem; }
+        .plugin-meta dd { margin: 0 0 0 1rem; }
+        .plugin-link { margin: 0.5rem 0 0 0; }
+        .plugin-link a { color: #0066cc; }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <img src="./Images/nvidia-logo-horiz-rgb-blk-for-screen.svg" alt="NVIDIA" />
+    </header>
+    <h1>Nsight Systems Plugins</h1>
+    <p>This site lists Nsight Systems third-party plugins.<p>
+    <ul>
+        <li>For information about Nsight Systems, visit the <a href="https://developer.nvidia.com/nsight-systems" target="_blank" rel="noopener noreferrer">Nsight Systems website</a>.</li>
+        <li>To add a third-party plugin to this list, refer to the instructions provided in the <a href="https://github.com/NVIDIA/NsightSystemsPlugins/blob/main/ADD_PLUGIN.md" target="_blank" rel="noopener noreferrer">ADD_PLUGIN.md file.</a> file.</li>
+    </ul>
+    <nav class="toc" aria-label="Plugin list">
+    <p><b>Table of Contents</b></p>
+        <ul>
+                    <li><a href="#plugin-0">gpfs_metrics</a></li>
+        <li><a href="#plugin-1">network_interface</a></li>
+        <li><a href="#plugin-2">sw_nsys_plugin</a></li>
+        </ul>
+        <p><a href="#legal-disclaimer">Legal Disclaimer</a></p>
+    </nav>
+
+        <article class="plugin-card" id="plugin-0">
+            <div class="plugin-header">
+                <h2>gpfs_metrics</h2>
+            </div>
+            <p class="plugin-desc">This plugin collects GPFS (IBM General Parallel File System) client volumes metrics and displays them over the Nsight Systems timeline view.</p>
+            <div class="plugin-thumb"><a href="./Images/gpfs_metrics.png"><img src="./Images/gpfs_metrics.png" alt="gpfs_metrics plugin image" class="plugin-img" /></a></div>
+            <dl class="plugin-meta">
+                <dt>Architectures</dt><dd>x64, aarch64</dd>
+                <dt>Operating systems</dt><dd>Linux</dd>
+                <dt>Minimal Nsight Systems version</dt><dd>2026.2.1</dd>
+                <dt>Setup Notes</dt><dd>This plugin is installed with the IBM storage scale client driver. Use the NSYS_PLUGIN_SEARCH_DIRS environment variable to specify the directory containing the plugin.</dd>
+                <dt>Site URL</dt><dd><p class="plugin-link"><a href="https://www.ibm.com/products/storage-scale" rel="noopener noreferrer">https://www.ibm.com/products/storage-scale</a></p></dd>
+                <dt>Company</dt><dd>IBM</dd>
+            </dl>
+        </article>
+
+        <article class="plugin-card" id="plugin-1">
+            <div class="plugin-header">
+                <h2>network_interface</h2>
+            </div>
+            <p class="plugin-desc">A sample plugin, which displays the network counters of a given Ethernet interface. Its aim is to provide a simple example of an Nsight Systems plugin. The plugin source code can be found under SamplePlugins/NetworkUsage.</p>
+            <div class="plugin-thumb"><a href="./Images/network_interface.png"><img src="./Images/network_interface.png" alt="network_interface plugin image" class="plugin-img" /></a></div>
+            <dl class="plugin-meta">
+                <dt>Architectures</dt><dd>x64, aarch64</dd>
+                <dt>Operating systems</dt><dd>Linux</dd>
+                <dt>Minimal Nsight Systems version</dt><dd>2024.1.1</dd>
+                <dt>Setup Notes</dt><dd>This plugin is included within the Nsight Systems installation package for Linux.</dd>
+                <dt>Site URL</dt><dd><p class="plugin-link"><a href="https://developer.nvidia.com/nsight-systems" rel="noopener noreferrer">https://developer.nvidia.com/nsight-systems</a></p></dd>
+                <dt>Company</dt><dd>NVIDIA</dd>
+            </dl>
+        </article>
+
+        <article class="plugin-card" id="plugin-2">
+            <div class="plugin-header">
+                <h2>sw_nsys_plugin</h2>
+            </div>
+            <p class="plugin-desc">A plugin to monitor and record H3P PCIe switch utilization, throughput, and error counters onto the Nsight Systems timeline.</p>
+            <div class="plugin-thumb"><a href="./Images/sw_nsys_plugin.png"><img src="./Images/sw_nsys_plugin.png" alt="sw_nsys_plugin image" class="plugin-img" /></a></div>
+            <dl class="plugin-meta">
+                <dt>Architectures</dt><dd>x64</dd>
+                <dt>Operating systems</dt><dd>Linux</dd>
+                <dt>Minimal Nsight Systems version</dt><dd>2026.1.1</dd>
+                <dt>Setup Notes</dt><dd>Requires libh3ppci.so and nsys-plugin.yaml. Set NSYS_PLUGIN_SEARCH_DIRS to point to the plugins directory.</dd>
+                <dt>Site URL</dt><dd><p class="plugin-link"><a href="https://www.h3platform.com/" rel="noopener noreferrer">https://www.h3platform.com/</a></p></dd>
+                <dt>Company</dt><dd>H3 Platform Inc.</dd>
+            </dl>
+        </article>
+<article class="plugin-card" id="legal-disclaimer">
+<p><b>Legal Disclaimer</b></p>
+    <p>The plugins made available on this site are third-party projects provided solely as a convenience and resource for developers. These plugins are not developed, reviewed, tested, modified, or endorsed by us.</p>
+    <p>Third-party plugins may contain errors, security vulnerabilities, or functionality that is inaccurate, incomplete, or otherwise undesirable. By downloading or using any plugin, you acknowledge and agree that you do so at your own risk. We disclaim all responsibility and liability for any harm, damage, or loss arising from the use of these plugins.</p>
+    <p>Use of any plugin is subject to the applicable third-party license terms, and you are solely responsible for complying with those terms.</p>
+    <p>We do not provide support, updates, or security fixes for these plugins.</p>
+</article>
+</body>
+</html>

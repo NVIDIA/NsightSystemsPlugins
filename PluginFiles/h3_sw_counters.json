@@ -13,6 +13,6 @@
     "SiteURL": "https://github.com/H3Platform/SW_NSYS_Plugin",
     "Architectures": ["x64"],
     "OperatingSystems": ["Linux"],
-    "MinNsightSystemsVersion": "2026.1.1",
+    "MinNsightSystemsVersion": "2026.2.1",
     "SetupNotes": "Requires libh3ppci.so. Set NSYS_PLUGIN_SEARCH_DIRS to point to the plugins directory."
 }

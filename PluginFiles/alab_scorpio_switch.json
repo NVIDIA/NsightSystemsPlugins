@@ -1,0 +1,18 @@
+{
+    "SchemaVersion": 1,
+    "Company": "Astera Labs",
+    "Name": "alab_scorpio_switch",
+    "Description": "Astera Labs Scorpio PCIe switch telemetry on the Nsight Systems timeline - per-port bandwidth, PCIe link error counters and die temperature. Correlate switch traffic with GPU workload and analyze how link errors affect it.",
+    "Images": 
+    [
+        {
+            "Path": "./Images/alab_scorpio_switch.png",
+            "Description": "alab_scorpio_switch plugin image"
+        }
+    ],
+    "SiteURL": "https://www.asteralabs.com/products/scorpio-smart-fabric-switch/",
+    "Architectures": ["x64"],
+    "OperatingSystems": ["Linux"],
+    "MinNsightSystemsVersion": "2025.5.2",
+    "SetupNotes": "This plugin is part of Astera Labs COSMOS software suite, please contact Astera Labs support for installation and usage instructions."
+}
